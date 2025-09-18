@@ -1,0 +1,56 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  account_presentation:
+    build:
+      context: "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Account.Presentation"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/LRA.Account.Presentation.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "lra.account.presentation:dev"
+    ports: []
+    volumes:
+    - "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Account.Presentation:/app:rw"
+    - "E:\\WORK\\LRA-GatalskiyDmitry:/src:rw"
+    - "C:\\Users\\Kangaschan\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"
+  email_service:
+    build:
+      context: "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Email"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/LRA.Email.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "lra.email:dev"
+    ports: []
+    volumes:
+    - "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Email:/app:rw"
+    - "E:\\WORK\\LRA-GatalskiyDmitry:/src:rw"
+    - "C:\\Users\\Kangaschan\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"
+  gateways_client:
+    build:
+      context: "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Gateways.Client"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/LRA.Gateways.Client.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "lra.gateways.client:dev"
+    ports: []
+    volumes:
+    - "E:\\WORK\\LRA-GatalskiyDmitry\\LRA.Gateways.Client:/app:rw"
+    - "E:\\WORK\\LRA-GatalskiyDmitry:/src:rw"
+    - "C:\\Users\\Kangaschan\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"

@@ -1,0 +1,3 @@
+create-user --realm=lra-realm --username=superadmin@mail.com --email=superadmin@mail.com --id=f0b5af18-5352-4716-9ef4-c6654e5e7aeb --enabled=true
+
+set-password --realm=lra-realm --username=superadmin@mail.com --new-password=SuperAdmin123!
